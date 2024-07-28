@@ -3,6 +3,11 @@ import { MenuItem } from '@/app/components/header/MenuItem';
 import HomeIcon from '@/assets/icons/20/home.svg';
 import ProjectsIcon from '@/assets/icons/20/projects.svg';
 import BlogIcon from '@/assets/icons/20/blog.svg';
+import React, { Ref } from 'react';
+import type { VariantProps } from 'class-variance-authority';
+import { buttonVariants } from '@/app/components/ui/Button';
+import { Slot } from '@radix-ui/react-slot';
+import { cn } from '@/app/common/utils';
 
 const HEADER_LIST = [
     {
@@ -22,9 +27,16 @@ const HEADER_LIST = [
     },
 ];
 
-export function Menu() {
+export interface MenuProps
+    extends React.ButtonHTMLAttributes<HTMLUListElement>,
+        React.RefAttributes<HTMLUListElement> {
+    asChild?: boolean;
+}
+
+export function Menu({ asChild, ...props }: MenuProps) {
+    const Comp = asChild ? Slot : 'ul';
     return (
-        <ul className="gap-8 hidden 2xl:flex">
+        <Comp {...props}>
             {HEADER_LIST.map((item, index) => (
                 <MenuItem
                     key={index}
@@ -32,6 +44,6 @@ export function Menu() {
                     Icon={item.icon}
                 />
             ))}
-        </ul>
+        </Comp>
     );
 }

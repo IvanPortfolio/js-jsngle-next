@@ -1,15 +1,19 @@
-import { BlogPostContent } from '@/components/blog/BlogPostContent';
-import { PostLink } from '@/components/blog/PostLink';
-import { Tag } from '@/components/blog/Tag';
+import { BlogPostContent } from '@/app/components/blog/BlogPostContent';
+import { PostReadingTime } from '@/app/components/blog/PostReadingTime';
 import { PostDate } from '@/app/components/blog/PostDate';
+import { PostLink } from '@/app/components/blog/PostLink';
+import { Tag } from '@/app/components/blog/Tag';
 
-export const BlogPost = ({ title, slug, tag, date, thumbnail }) => (
-    <BlogPostContent>
-        {thumbnail}
-        <PostLink slug={slug} title={title} />
-        <div className="flex flex-row justify-between items-center">
+export const BlogPost = ({ title, slug, tag, date, thumbnail, body }) => {
+    return (
+        <BlogPostContent>
+            {thumbnail}
             <Tag tag={tag} />
-            <PostDate date={date} />
-        </div>
-    </BlogPostContent>
-);
+            <PostLink slug={slug} title={title} />
+            <div className="flex flex-row gap-4 items-center">
+                <PostDate date={date} />
+                <PostReadingTime markdownText={body} />
+            </div>
+        </BlogPostContent>
+    );
+};

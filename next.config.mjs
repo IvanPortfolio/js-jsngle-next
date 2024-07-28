@@ -4,15 +4,23 @@ import createMDX from '@next/mdx';
 const nextConfig = {
     // Configure `pageExtensions` to include markdown and MDX files
     pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+    logging: {
+        fetches: {
+            fullUrl: true,
+        },
+    },
     webpack(config) {
-        config.module.rules.push({
-            test: /\.svg$/i,
-            type: 'asset',
-            resourceQuery: /url/, // *.svg?url
-        }, {
-            test: /\.svg$/,
-            use: ['@svgr/webpack'],
-        });
+        config.module.rules.push(
+            {
+                test: /\.svg$/i,
+                type: 'asset',
+                resourceQuery: /url/, // *.svg?url
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
+            },
+        );
 
         return config;
     },

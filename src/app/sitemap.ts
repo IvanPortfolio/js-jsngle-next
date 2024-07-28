@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts } from '@/common/api';
+import { getAllPosts } from '@/app/common/api';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const posts = await getAllPosts(false);
+    const posts = await getAllPosts(false, { skip: 0, limit: 1000 });
 
     const postsPages = posts.map((post) => ({
         url: `/blog/${post.slug}`,
@@ -17,6 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         {
             url: '/blog',
             priority: 1.0,
+            changeFrequency: 'weekly',
         },
         {
             url: '/contact',

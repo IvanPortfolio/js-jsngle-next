@@ -12,6 +12,7 @@ module.exports = {
         extend: {
             colors: {
                 lightGray: '#ECECED',
+                'mid-gray': '#C5C6CF',
                 dark: '#020617',
                 gray: '#F3F5F7',
                 'dark-gray': '#64748B',
@@ -21,6 +22,9 @@ module.exports = {
                 'light-blue-hover': '#D8E1FF',
             },
             gradientColorStops: {},
+            fontFamily: {
+                sans: ['var(--font-space-grotesk)'],
+            },
             fontSize: {
                 sm: ['0.875rem', '1.1375rem'],
                 lg: ['1.125rem', '1.575rem'],

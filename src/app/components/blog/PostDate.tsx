@@ -1,6 +1,9 @@
-export function PostDate({ date }: { date: any }) {
+import CalendarIcon from '@/assets/icons/20/calendar.svg';
+
+export function PostDate({ date }: { date: string }) {
     return (
-        <span className="text-sm text-dark-gray dark:text-dark-gray font-medium">
+        <span className="text-sm text-dark-gray dark:text-white font-medium flex flex-row gap-1 justify-center items-center">
+            <CalendarIcon />
             {new Intl.DateTimeFormat('en-US', {
                 month: 'short',
                 day: '2-digit',
