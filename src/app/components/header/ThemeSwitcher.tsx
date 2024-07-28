@@ -17,6 +17,7 @@ export function ThemeSwitcher() {
         return (
             <Button
                 size="icon"
+                aria-label="Theme switcher"
                 className="bg-transparent w-8 h-8 2xl:w-12 2xl:h-12"
                 key="placeholder"
             />
@@ -28,6 +29,7 @@ export function ThemeSwitcher() {
     return (
         <Button
             size="icon"
+            aria-label="Theme switcher"
             className="bg-transparent hover:bg-transparent w-8 h-8 2xl:w-12 2xl:h-12"
             onClick={handleChangeTheme}
         >

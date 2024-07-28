@@ -1,5 +1,5 @@
 import { Button } from '@/app/components/ui/Button';
 
 export function ContactMe() {
-    return <Button>Contact Me</Button>;
+    return <Button aria-label="Contact Me">Contact Me</Button>;
 }

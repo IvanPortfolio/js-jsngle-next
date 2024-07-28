@@ -11,34 +11,40 @@ export function SocialLinks() {
         {
             href: 'https://www.linkedin.com/in/ivan-kaminskyi-345b94113/',
             icon: <LinkedInIcon />,
-            alt: 'LinkedIn Icon',
+            alt: 'LinkedIn',
         },
         {
             href: 'https://github.com/JsJungle',
             icon: <GithubIcon />,
-            alt: 'GitHub Icon',
+            alt: 'GitHub',
         },
         {
             href: 'https://www.facebook.com/share/7iSNbzs4m9ZfNZgu/?mibextid=LQQJ4d',
             icon: <FacebookIcon />,
-            alt: 'Facebook Icon',
+            alt: 'Facebook',
         },
         {
             href: 'https://dev.to/ivan_kaminskyi',
             icon: <DevToIcon />,
-            alt: 'Dev.to Icon',
+            alt: 'Dev.to',
         },
         {
             href: 'https://www.instagram.com/ivankaminskii?igsh=aGRnazZyM2txYW9w&utm_source=qr',
             icon: <InstagramIcon />,
-            alt: 'Instagram Icon',
+            alt: 'Instagram',
         },
     ];
 
     return (
         <div className="flex flex-row gap-4">
             {socialLinks.map((link, index) => (
-                <Button variant="secondary" size="icon" key={index} asChild>
+                <Button
+                    variant="secondary"
+                    size="icon"
+                    aria-label={link.alt}
+                    key={index}
+                    asChild
+                >
                     <a href={link.href} target="_blank">
                         {link.icon}
                     </a>
