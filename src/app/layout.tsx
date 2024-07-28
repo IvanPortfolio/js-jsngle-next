@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import { SidebarProvider } from '@/app/context/sidebar';
 import { Sidebar } from '@/app/components/sidebar/Sidebar';
 import { Background } from '@/app/components/layout/Background';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function RootLayout({ children }) {
     return (
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
                         <div className="container relative z-10">
                             <Header />
                             <div className="pt-6">{children}</div>
+                            <SpeedInsights />
                             <Sidebar />
                         </div>
                     </SidebarProvider>
