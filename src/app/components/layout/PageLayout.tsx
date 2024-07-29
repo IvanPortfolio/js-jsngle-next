@@ -15,7 +15,7 @@ export function PageLayout({
                 <ProfileSection />
                 {sideBar}
             </div>
-            <div className="flex-1">{children}</div>
+            <div className="flex-1 overflow-auto">{children}</div>
         </div>
     );
 }
