@@ -78,23 +78,18 @@ export async function getAllPosts(
 }
 
 export async function getFeaturedPosts(isDraftMode: boolean) {
-    const entries = await fetchGraphQL(`
+    const entries = await fetchGraphQL(
+        `
       query {
           articleCollection(limit: 3, order: date_DESC, preview: ${isDraftMode ? 'true' : 'false'}) {
             items {
-              sys {
-                id
-              }
-              title
-              slug
-              date,
-              category {
-                name
-              }
+              ${POST_GRAPHQL_FIELDS}
             }
           }
         }
-    `);
+    `,
+        isDraftMode,
+    );
 
     return extractPostEntries(entries);
 }

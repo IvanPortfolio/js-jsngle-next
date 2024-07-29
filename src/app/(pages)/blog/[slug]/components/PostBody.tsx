@@ -1,6 +1,7 @@
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import rehypeSlug from 'rehype-slug';
 // import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import remarkGfm from 'remark-gfm';
 import React from 'react';
 import { visit } from 'unist-util-visit';
 
@@ -11,6 +12,7 @@ export function PostBody(props: { post: any }) {
                 source={props.post.body}
                 options={{
                     mdxOptions: {
+                        remarkPlugins: [remarkGfm],
                         rehypePlugins: [
                             addHrBeforeH2,
                             rehypeSlug,
