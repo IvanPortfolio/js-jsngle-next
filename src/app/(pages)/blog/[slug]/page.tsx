@@ -7,8 +7,6 @@ import { Section } from '@/app/components/ui/Section';
 import { Metadata } from 'next';
 import { RelatedPosts } from '@/app/(pages)/blog/[slug]/components/RelatedPosts';
 
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
     const allPosts = await getAllPosts(false, { skip: 0, limit: 1000 });
 
