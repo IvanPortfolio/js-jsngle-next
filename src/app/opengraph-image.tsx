@@ -16,7 +16,7 @@ export const contentType = 'image/png';
 export default async function Image() {
     return new ImageResponse(
         (
-            /*<JavaScriptThumbnail />*/
+            /* <JavaScriptThumbnail /> */
             <div
                 style={{
                     width: '100%',

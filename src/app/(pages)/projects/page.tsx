@@ -1,8 +1,8 @@
-import { PageLayout } from '@/app/components/layout/PageLayout';
-import { ProjectItem } from '@/app/(pages)/projects/components/ProjectItem';
+import { PageLayout } from '@/components/layout';
 import { Metadata } from 'next';
-import { PROJECTS } from '@/app/(pages)/projects/data';
-import { Section } from '@/app/components/ui/Section';
+import { Section } from '@/components/ui';
+import { ProjectItem } from './components/ProjectItem';
+import { PROJECTS } from './data';
 
 export default function Projects() {
     return (

@@ -1,5 +1,4 @@
-import { Section } from '@/app/components/ui/Section';
-import { SectionContent } from '@/app/components/ui/SectionContent';
+import { Section, SectionContent } from '@/components/ui';
 
 function Progress() {
     return (
@@ -59,7 +58,7 @@ export function AboutMeSection() {
                         continuous improvement and innovation within my teams.
                         My journey in the tech industry is fueled by a
                         relentless pursuit of knowledge, a deep-seated love for
-                        solving comple problems, and a belief in the power of
+                        solving complex problems, and a belief in the power of
                         teamwork and effective communication to drive project
                         success.
                     </span>

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAllPosts } from '@/app/common/api';
+import { getAllPosts } from '@/common/api';
 
 async function redirectPosts(request: NextRequest) {
     const posts = await getAllPosts(false, { skip: 0, limit: 1000 });

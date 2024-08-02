@@ -1,5 +1,5 @@
-import { IProject } from '@/app/(pages)/projects/types';
-import { ProjectSubheadingSection } from '@/app/(pages)/projects/components/ProjectSubheadingSection';
+import { IProject } from '../types';
+import { ProjectSubheadingSection } from './ProjectSubheadingSection';
 
 export function ProjectSubheading({ project }: { project: IProject }) {
     return (

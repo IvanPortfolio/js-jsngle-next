@@ -16,10 +16,10 @@ export function PostBody(props: { post: any }) {
                         rehypePlugins: [
                             addHrBeforeH2,
                             rehypeSlug,
-                            /*[
+                            /* [
                                 rehypeAutolinkHeadings,
                                 { behavior: 'wrap', test: ['h2', 'h3'] },
-                            ],*/
+                            ], */
                         ],
                     },
                 }}
@@ -53,7 +53,7 @@ function addHrBeforeH2() {
         });
 
         // Perform all recorded insert actions
-        for (let insert of inserts.reverse()) {
+        for (const insert of inserts.reverse()) {
             insert.parent.children.splice(insert.index, 0, insert.element);
         }
     };

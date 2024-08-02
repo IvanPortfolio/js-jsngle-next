@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllPosts } from '@/app/common/api';
+import { getAllPosts } from '@/common/api';
 import { headers } from 'next/headers';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

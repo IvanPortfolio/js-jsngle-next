@@ -1,27 +1,25 @@
 import './global.css';
-import { spaceGrotesk } from '@/font';
 import React from 'react';
-import { Header } from '@/app/components/header/Header';
 import { ThemeProvider } from 'next-themes';
 import { Metadata } from 'next';
-import { SidebarProvider } from '@/app/context/sidebar';
-import { Sidebar } from '@/app/components/sidebar/Sidebar';
-import { Background } from '@/app/components/layout/Background';
+import { SidebarProvider } from '@/context';
+import { Background, Header, Sidebar } from '@/components/layout';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { spaceGrotesk } from '../font';
 
 export default function RootLayout({ children }) {
     return (
         <html
             lang="en"
-            className={`${spaceGrotesk.className} w-full`}
+            className={`${spaceGrotesk.className} w-full h-full`}
             suppressHydrationWarning
         >
-            <body className="bg-white dark:bg-dark pb-6 pt-4 px-2 relative">
+            <body className="bg-white dark:bg-dark pb-6 pt-4 px-2 relative h-full">
                 <ThemeProvider>
                     <SidebarProvider>
-                        <div className="container relative z-10">
+                        <div className="flex flex-col container relative z-10 min-h-full">
                             <Header />
-                            <div className="pt-6">{children}</div>
+                            <div className="pt-6 flex-grow">{children}</div>
                             <SpeedInsights />
                             <Sidebar />
                         </div>

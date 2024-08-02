@@ -1,7 +1,7 @@
-import { Paper, PaperProps } from '@/app/components/ui/Paper';
 import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
-import { SectionHeading } from '@/app/components/ui/SectionHeading';
+import { SectionHeading } from './SectionHeading';
+import { Paper, PaperProps } from './Paper';
 
 interface SectionProps extends PaperProps {
     title?: string;
@@ -21,7 +21,7 @@ export const Section = React.forwardRef<HTMLDivElement, SectionProps>(
                         </div>
                     ) : null}
 
-                    <div className={`flex flex-col gap-4`}>{children}</div>
+                    <div className="flex flex-col gap-4">{children}</div>
                 </div>
             </Comp>
         );

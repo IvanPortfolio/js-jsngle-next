@@ -1,13 +1,12 @@
-import { BlogPost } from './BlogPost';
-import { ReactThumbnail } from '@/app/components/thumbnail/ReactThumbnail';
-import { JavaScriptThumbnail } from '@/app/components/thumbnail/JavaScriptThumbnail';
+import { JavaScriptThumbnail, ReactThumbnail } from '@/components/thumbnail';
 import React from 'react';
-import { getFeaturedPosts } from '@/app/common/api';
+import { getFeaturedPosts } from '@/common/api';
 import { draftMode } from 'next/headers';
+import { BlogPost } from './BlogPost';
 
 const CATEGORY_TO_THUMBNAIL = {
     React: <ReactThumbnail className="h-[161.33px]" />,
-    JavaScript: <JavaScriptThumbnail className={'h-[161.33px]'} />,
+    JavaScript: <JavaScriptThumbnail className="h-[161.33px]" />,
 };
 
 export async function BlogList() {

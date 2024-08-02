@@ -2,9 +2,9 @@
 
 import * as React from 'react';
 import * as SheetPrimitive from '@radix-ui/react-dialog';
-import { cva, type VariantProps } from 'class-variance-authority';
+import { type VariantProps, cva } from 'class-variance-authority';
 
-import { cn } from '@/app/common/utils';
+import { cn } from '@/common/utils';
 
 const Sheet = SheetPrimitive.Root;
 
@@ -67,26 +67,28 @@ const SheetContent = React.forwardRef<
 ));
 SheetContent.displayName = SheetPrimitive.Content.displayName;
 
-const SheetHeader = ({
+function SheetHeader({
     className,
     ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-    <div className={cn('flex flex-col p-4', className)} {...props} />
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+    return <div className={cn('flex flex-col p-4', className)} {...props} />;
+}
 SheetHeader.displayName = 'SheetHeader';
 
-const SheetFooter = ({
+function SheetFooter({
     className,
     ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-    <div
-        className={cn(
-            'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
-            className,
-        )}
-        {...props}
-    />
-);
+}: React.HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div
+            className={cn(
+                'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
+                className,
+            )}
+            {...props}
+        />
+    );
+}
 SheetFooter.displayName = 'SheetFooter';
 
 const SheetTitle = React.forwardRef<

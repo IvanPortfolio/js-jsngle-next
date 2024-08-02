@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import { cn } from '@/app/common/utils';
+import React from 'react';
+import { cn } from '@/common/utils';
 import { Slot } from '@radix-ui/react-slot';
 
 export interface PaperProps extends React.HtmlHTMLAttributes<HTMLDivElement> {

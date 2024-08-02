@@ -1,7 +1,7 @@
-import { PostMetaSection } from '@/app/(pages)/blog/[slug]/components/PostMetaSection';
 import ClockIcon from '@/assets/icons/20/clock.svg';
-import { calculateReadingTime } from '@/app/common/utils';
+import { calculateReadingTime } from '@/common/utils';
 import React from 'react';
+import { PostMetaSection } from './PostMetaSection';
 
 export function PostReadingTime({ post }) {
     return (

@@ -3,7 +3,7 @@ import insuranceImage from '@/assets/images/insurance.png';
 import deliveryImage from '@/assets/images/delivery.png';
 import collaborationImage from '@/assets/images/collaboration.png';
 import logisticsImage from '@/assets/images/logistics.png';
-import { IProject } from '@/app/(pages)/projects/types';
+import { IProject } from './types';
 
 export const PROJECTS: IProject[] = [
     {
@@ -11,7 +11,7 @@ export const PROJECTS: IProject[] = [
         jobTitle: 'Senior Software Developer',
         date: 'Jul 2021–present',
         image: (
-            <Image src={insuranceImage} alt={'Insurance Management Platform'} />
+            <Image src={insuranceImage} alt="Insurance Management Platform" />
         ),
         responsibilities: [
             'Implement responsive web interfaces using React framework.',
@@ -57,7 +57,7 @@ export const PROJECTS: IProject[] = [
         image: (
             <Image
                 src={deliveryImage}
-                alt={'System for Optimizing Delivery Process'}
+                alt="System for Optimizing Delivery Process"
             />
         ),
         responsibilities: [
@@ -109,7 +109,7 @@ export const PROJECTS: IProject[] = [
         image: (
             <Image
                 src={collaborationImage}
-                alt={'Collaboration Tool Development'}
+                alt="Collaboration Tool Development"
             />
         ),
         responsibilities: [
@@ -148,7 +148,7 @@ export const PROJECTS: IProject[] = [
         image: (
             <Image
                 src={logisticsImage}
-                alt={'Application for Optimizing Logistics Processes'}
+                alt="Application for Optimizing Logistics Processes"
             />
         ),
         responsibilities: [

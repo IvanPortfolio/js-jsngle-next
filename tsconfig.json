@@ -18,8 +18,11 @@
             }
         ],
         "paths": {
-            "@/*": ["./src/*"],
-            "@/public/*": ["./public/*"]
+            "@/public/*": ["./public/*"],
+            "@/components/*": ["./src/app/components/*/index.ts"],
+            "@/common/*": ["./src/app/common/*"],
+            "@/assets/*": ["./src/assets/*"],
+            "@/context": ["./src/app/context/index.ts"]
         },
         "target": "ES2017"
     },

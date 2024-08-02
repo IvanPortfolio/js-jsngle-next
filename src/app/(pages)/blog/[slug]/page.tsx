@@ -1,11 +1,10 @@
 import React, { Suspense } from 'react';
-import { getAllPosts, getPostAndMorePosts } from '@/app/common/api';
-import { PageLayout } from '@/app/components/layout/PageLayout';
-import { Post } from '@/app/(pages)/blog/[slug]/components/Post';
-import { SubscribeSection } from '@/app/(home)/components/subscribe/SubscribeSection';
-import { Section } from '@/app/components/ui/Section';
+import { getAllPosts, getPostAndMorePosts } from '@/common/api';
+import { PageLayout, SubscribeSection } from '@/components/layout';
+import { Section } from '@/components/ui';
 import { Metadata } from 'next';
-import { RelatedPosts } from '@/app/(pages)/blog/[slug]/components/RelatedPosts';
+import { Post } from './components/Post';
+import { RelatedPosts } from './components/RelatedPosts';
 
 export async function generateStaticParams() {
     const allPosts = await getAllPosts(false, { skip: 0, limit: 1000 });
@@ -16,9 +15,7 @@ export async function generateStaticParams() {
 }
 
 function generateExcerptFromMarkdown(markdown: string): string {
-    return (
-        markdown.replace(/[#`*]/g, '').replace(/\n/g, ' ').slice(0, 90) + '...'
-    );
+    return `${markdown.replace(/[#`*]/g, '').replace(/\n/g, ' ').slice(0, 90)}...`;
 }
 
 export async function generateMetadata({

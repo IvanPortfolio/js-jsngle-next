@@ -1,10 +1,10 @@
-import { BlogPostContent } from '@/app/components/blog/BlogPostContent';
-import { PostReadingTime } from '@/app/components/blog/PostReadingTime';
-import { PostDate } from '@/app/components/blog/PostDate';
-import { PostLink } from '@/app/components/blog/PostLink';
-import { Tag } from '@/app/components/blog/Tag';
+import { BlogPostContent } from './BlogPostContent';
+import { PostReadingTime } from './PostReadingTime';
+import { PostDate } from './PostDate';
+import { PostLink } from './PostLink';
+import { Tag } from './Tag';
 
-export const BlogPost = ({ title, slug, tag, date, thumbnail, body }) => {
+export function BlogPost({ title, slug, tag, date, thumbnail, body }) {
     return (
         <BlogPostContent>
             {thumbnail}
@@ -16,4 +16,4 @@ export const BlogPost = ({ title, slug, tag, date, thumbnail, body }) => {
             </div>
         </BlogPostContent>
     );
-};
+}

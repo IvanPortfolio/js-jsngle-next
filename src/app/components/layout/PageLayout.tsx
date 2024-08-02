@@ -1,6 +1,5 @@
-import { ProfileSection } from '../profile-section';
-import { Section } from '@/app/components/ui/Section';
 import React from 'react';
+import { ProfileSection } from './profile-section';
 
 export function PageLayout({
     sideBar,
@@ -11,7 +10,7 @@ export function PageLayout({
 }) {
     return (
         <div className="flex flex-col 2xl:flex-row gap-6">
-            <div className="2xl:w-[432px] flex-none 2xl:sticky 2xl:top-[104px] 2xl:h-[651px]">
+            <div className="hidden 2xl:flex 2xl:w-[432px] flex-none 2xl:sticky 2xl:top-[104px] 2xl:h-[651px]">
                 <ProfileSection />
                 {sideBar}
             </div>

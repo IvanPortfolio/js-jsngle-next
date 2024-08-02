@@ -1,4 +1,4 @@
-import { IProject } from '@/app/(pages)/projects/types';
+import { IProject } from '../types';
 
 export function ProjectSkills({ project }: { project: IProject }) {
     return (

@@ -1,11 +1,9 @@
-import { ReactThumbnail } from '@/app/components/thumbnail/ReactThumbnail';
-import { JavaScriptThumbnail } from '@/app/components/thumbnail/JavaScriptThumbnail';
+import { JavaScriptThumbnail, ReactThumbnail } from '@/components/thumbnail';
 import React from 'react';
 import { draftMode } from 'next/headers';
-import { getPostAndMorePosts } from '@/app/common/api';
-import { Section } from '@/app/components/ui/Section';
-import { PostsGrid } from '@/app/components/blog/PostsGrid';
-import { BlogPost } from '@/app/components/blog/BlogPost';
+import { getPostAndMorePosts } from '@/common/api';
+import { Section } from '@/components/ui';
+import { BlogPost, PostsGrid } from '@/components/blog';
 
 const CATEGORY_TO_THUMBNAIL = {
     React: <ReactThumbnail className="aspect-[2/1]" />,

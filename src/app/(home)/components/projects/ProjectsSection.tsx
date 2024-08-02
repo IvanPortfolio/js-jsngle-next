@@ -1,21 +1,19 @@
-import { Section } from '@/app/components/ui/Section';
+import { Button, Section, SectionContent } from '@/components/ui';
 import Link from 'next/link';
 import ArrowRightIcon from '@/assets/icons/24/arrowRight.svg';
 import Image from 'next/image';
 import insuranceImage from '@/assets/images/insurance.png';
 import deliveryImage from '@/assets/images/delivery.png';
-import { Button } from '@/app/components/ui/Button';
-import { SectionContent } from '@/app/components/ui/SectionContent';
 
 function ProjectItem({ image, children }) {
     return (
         <SectionContent className="group hover:bg-light-blue-hover flex flex-col gap-4">
-            <div className={'rounded-lg overflow-hidden w-full h-[165px]'}>
+            <div className="rounded-lg overflow-hidden w-full h-[165px]">
                 <Image
                     src={image.src}
                     alt={image.alt}
                     width={380}
-                    className={'group-hover:scale-125'}
+                    className="group-hover:scale-125"
                 />
             </div>
 
@@ -33,7 +31,7 @@ export function ProjectsSection() {
             link={
                 <Button asChild variant="link" size="link">
                     <Link
-                        href={'/projects'}
+                        href="/projects"
                         className="flex flex-row gap-2 justify-center items-center"
                     >
                         View all <ArrowRightIcon />

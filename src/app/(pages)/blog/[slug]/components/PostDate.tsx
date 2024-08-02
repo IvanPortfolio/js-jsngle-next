@@ -1,6 +1,6 @@
-import { PostMetaSection } from '@/app/(pages)/blog/[slug]/components/PostMetaSection';
 import CalendarIcon from '@/assets/icons/20/calendar.svg';
 import React from 'react';
+import { PostMetaSection } from './PostMetaSection';
 
 export function PostDate(props: { post: any }) {
     return (

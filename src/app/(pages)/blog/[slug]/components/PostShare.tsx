@@ -1,5 +1,6 @@
 'use client';
-import { Button } from '@/app/components/ui/Button';
+
+import { Button } from '@/components/ui';
 import React from 'react';
 import LinkedInIcon from '@/assets/icons/24/linkedin.svg';
 import FacebookIcon from '@/assets/icons/24/facebook.svg';
@@ -57,22 +58,22 @@ export function PostShare({ post }) {
                 <ShareButton
                     onClick={shareHandlers.x}
                     Icon={XIcon}
-                    aria-label={'Share on X'}
+                    aria-label="Share on X"
                 />
                 <ShareButton
                     onClick={shareHandlers.facebook}
                     Icon={FacebookIcon}
-                    aria-label={'Share on Facebook'}
+                    aria-label="Share on Facebook"
                 />
                 <ShareButton
                     onClick={() => shareHandlers.email(post)}
                     Icon={EmailIcon}
-                    aria-label={'Share via Email'}
+                    aria-label="Share via Email"
                 />
                 <ShareButton
                     onClick={shareHandlers.link}
                     Icon={LinkIcon}
-                    aria-label={'Copy link'}
+                    aria-label="Copy link"
                 />
             </div>
         </div>

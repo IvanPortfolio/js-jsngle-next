@@ -1,11 +1,11 @@
 import { draftMode } from 'next/headers';
-import { getPostAndMorePosts } from '@/app/common/api';
-import { PostThumbnail } from '@/app/(pages)/blog/[slug]/components/PostThumbnail';
-import { PostHeading } from '@/app/(pages)/blog/[slug]/components/PostHeading';
-import { PostBody } from '@/app/(pages)/blog/[slug]/components/PostBody';
+import { getPostAndMorePosts } from '@/common/api';
 import React from 'react';
-import { PostTags } from '@/app/(pages)/blog/[slug]/components/PostTags';
-import { PostShare } from '@/app/(pages)/blog/[slug]/components/PostShare';
+import { PostThumbnail } from './PostThumbnail';
+import { PostHeading } from './PostHeading';
+import { PostBody } from './PostBody';
+import { PostTags } from './PostTags';
+import { PostShare } from './PostShare';
 
 export async function Post({ slug }) {
     const { isEnabled } = draftMode();

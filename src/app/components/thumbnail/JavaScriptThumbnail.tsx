@@ -1,22 +1,20 @@
 import JavaScriptIcon from '@/assets/icons/javaScript.svg';
 import React from 'react';
-import { GradientThumbnail } from '@/app/components/thumbnail/GradientThumbnail';
-import { cn } from '@/app/common/utils';
+import { cn } from '@/common/utils';
+import { GradientThumbnail } from './GradientThumbnail';
 
 const JavaScriptThumbnail = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-    return (
-        <GradientThumbnail
-            ref={ref}
-            className={cn('from-[#FD4C9C] to-[#F89B29]', className)}
-            {...props}
-        >
-            <JavaScriptIcon />
-        </GradientThumbnail>
-    );
-});
+>(({ className, ...props }, ref) => (
+    <GradientThumbnail
+        ref={ref}
+        className={cn('from-[#FD4C9C] to-[#F89B29]', className)}
+        {...props}
+    >
+        <JavaScriptIcon />
+    </GradientThumbnail>
+));
 
 JavaScriptThumbnail.displayName = 'JavaScriptThumbnail';
 

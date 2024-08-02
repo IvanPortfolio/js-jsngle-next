@@ -2,18 +2,21 @@ import * as React from 'react';
 import CaretLeftIcon from '@/assets/icons/24/caret-left.svg';
 import CaretRightIcon from '@/assets/icons/24/caret-right.svg';
 
-import { Button, ButtonProps } from './Button';
-import { cn } from '@/app/common/utils';
+import { cn } from '@/common/utils';
 import Link from 'next/link';
+import { Button, ButtonProps } from './Button';
 
-const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
-    <nav
-        role="navigation"
-        aria-label="pagination"
-        className={cn('mx-auto flex w-full justify-center', className)}
-        {...props}
-    />
-);
+function Pagination({ className, ...props }: React.ComponentProps<'nav'>) {
+    return (
+        <nav
+            role="navigation"
+            aria-label="pagination"
+            className={cn('mx-auto flex w-full justify-center', className)}
+            {...props}
+        />
+    );
+}
+
 Pagination.displayName = 'Pagination';
 
 const PaginationContent = React.forwardRef<
@@ -39,52 +42,62 @@ PaginationItem.displayName = 'PaginationItem';
 type PaginationLinkProps = { isActive: boolean } & ButtonProps &
     React.ComponentProps<typeof Link>;
 
-const PaginationLink = ({
+function PaginationLink({
     href,
     children,
     isActive,
+    // eslint-disable-next-line no-unused-vars
     ref,
     ...props
-}: PaginationLinkProps) => (
-    <Button
-        asChild
-        size="icon"
-        aria-current={isActive ? 'page' : undefined}
-        {...props}
-    >
-        <Link href={href}>{children}</Link>
-    </Button>
-);
+}: PaginationLinkProps) {
+    return (
+        <Button
+            asChild
+            size="icon"
+            aria-current={isActive ? 'page' : undefined}
+            {...props}
+        >
+            <Link href={href}>{children}</Link>
+        </Button>
+    );
+}
+
 PaginationLink.displayName = 'PaginationLink';
 
-const PaginationPrevious = ({
+function PaginationPrevious({
     className,
     ...props
-}: React.ComponentProps<typeof PaginationLink>) => (
-    <PaginationLink
-        aria-label="Go to previous page"
-        size="icon"
-        className={cn('', className)}
-        {...props}
-    >
-        <CaretLeftIcon />
-    </PaginationLink>
-);
+}: React.ComponentProps<typeof PaginationLink>) {
+    return (
+        <PaginationLink
+            aria-label="Go to previous page"
+            size="icon"
+            className={cn('', className)}
+            {...props}
+        >
+            <CaretLeftIcon />
+        </PaginationLink>
+    );
+}
+
 PaginationPrevious.displayName = 'PaginationPrevious';
 
-const PaginationNext = ({
+function PaginationNext({
     className,
     ...props
-}: React.ComponentProps<typeof PaginationLink>) => (
-    <PaginationLink
-        aria-label="Go to next page"
-        size="icon"
-        className={cn('', className)}
-        {...props}
-    >
-        <CaretRightIcon />
-    </PaginationLink>
-);
+}: React.ComponentProps<typeof PaginationLink>) {
+    return (
+        <PaginationLink
+            aria-label="Go to next page"
+            size="icon"
+            className={cn('', className)}
+            {...props}
+        >
+            <CaretRightIcon />
+        </PaginationLink>
+    );
+}
+
 PaginationNext.displayName = 'PaginationNext';
 
 export {

@@ -1,5 +1,5 @@
 import ClockIcon from '@/assets/icons/20/clock.svg';
-import { calculateReadingTime } from '@/app/common/utils';
+import { calculateReadingTime } from '@/common/utils';
 
 export function PostReadingTime(props: { markdownText: any }) {
     return (

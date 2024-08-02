@@ -1,6 +1,6 @@
-import { ProjectLine } from '@/app/(pages)/projects/components/ProjectLine';
-import { ProjectContent } from '@/app/(pages)/projects/components/ProjectContent';
-import { IProject } from '@/app/(pages)/projects/types';
+import { ProjectLine } from './ProjectLine';
+import { ProjectContent } from './ProjectContent';
+import { IProject } from '../types';
 
 export function ProjectItem({ project }: { project: IProject }) {
     return (

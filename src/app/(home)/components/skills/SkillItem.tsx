@@ -1,6 +1,5 @@
-import { Button } from '@/app/components/ui/Button';
+import { Button, SectionContent } from '@/components/ui';
 import DoubleRightIcon from '@/assets/icons/20/doubleRight.svg';
-import { SectionContent } from '@/app/components/ui/SectionContent';
 
 export function SkillItem({ icon, title, list }) {
     return (
@@ -17,7 +16,7 @@ export function SkillItem({ icon, title, list }) {
                     {title}
                 </h3>
             </div>
-            <ul className={`flex flex-col gap-2`}>
+            <ul className="flex flex-col gap-2">
                 {list.map((item: string, index: number) => (
                     <li
                         key={index}

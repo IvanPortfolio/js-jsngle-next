@@ -1,9 +1,9 @@
-import { PostsList } from '@/app/(pages)/blog/components/PostsList';
 import { Metadata } from 'next';
-import { PageLayout } from '@/app/components/layout/PageLayout';
+import { PageLayout } from '@/components/layout';
 import { Suspense } from 'react';
-import { BlogPagination } from '@/app/(pages)/blog/components/BlogPagination';
-import { Section } from '@/app/components/ui/Section';
+import { Section } from '@/components/ui';
+import { BlogPagination } from './components/BlogPagination';
+import { PostsList } from './components/PostsList';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {

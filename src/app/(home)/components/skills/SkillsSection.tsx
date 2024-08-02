@@ -1,4 +1,4 @@
-import { Section } from '@/app/components/ui/Section';
+import { Section } from '@/components/ui';
 import PaletteIcon from '@/assets/icons/32/palette.svg';
 import UniteIcon from '@/assets/icons/32/unite.svg';
 import LaptopIcon from '@/assets/icons/32/laptop.svg';
@@ -6,10 +6,10 @@ import { SkillItem } from './SkillItem';
 
 export function SkillsSection() {
     return (
-        <Section title={'Skills'}>
+        <Section title="Skills">
             <div className="grid grid-cols-1 2xl:grid-cols-3 gap-4 mb-[2px]">
                 <SkillItem
-                    title={'General Solution Design Experience'}
+                    title="General Solution Design Experience"
                     icon={<PaletteIcon />}
                     list={[
                         'Mobile Web Development',
@@ -20,7 +20,7 @@ export function SkillsSection() {
                     ]}
                 />
                 <SkillItem
-                    title={'Software Development Methodologies'}
+                    title="Software Development Methodologies"
                     icon={<UniteIcon />}
                     list={[
                         'Agile & Scrum',
@@ -31,7 +31,7 @@ export function SkillsSection() {
                     ]}
                 />
                 <SkillItem
-                    title={'Platforms, Technologies, and Programming Skills'}
+                    title="Platforms, Technologies, and Programming Skills"
                     icon={<LaptopIcon />}
                     list={[
                         'Runtime Environments',

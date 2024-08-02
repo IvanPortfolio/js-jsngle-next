@@ -1,6 +1,6 @@
-import { PostDate } from '@/app/(pages)/blog/[slug]/components/PostDate';
-import { PostReadingTime } from '@/app/(pages)/blog/[slug]/components/PostReadingTime';
 import React from 'react';
+import { PostDate } from './PostDate';
+import { PostReadingTime } from './PostReadingTime';
 
 export function PostMeta({ post }: { post: any }) {
     return (

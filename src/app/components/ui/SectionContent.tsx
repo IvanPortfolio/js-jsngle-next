@@ -1,6 +1,6 @@
 import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
-import { cn } from '@/app/common/utils';
+import { cn } from '@/common/utils';
 
 export interface SectionContentProps
     extends React.HtmlHTMLAttributes<HTMLDivElement> {

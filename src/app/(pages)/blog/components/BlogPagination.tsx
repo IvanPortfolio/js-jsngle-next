@@ -1,12 +1,12 @@
-import { getPostCount } from '@/app/common/api';
+import { getPostCount } from '@/common/api';
 import {
     Pagination,
     PaginationContent,
     PaginationItem,
     PaginationNext,
     PaginationPrevious,
-} from '@/app/components/ui/Pagination';
-import { PAGE_SIZE } from '@/app/(pages)/blog/constants';
+} from '@/components/ui';
+import { PAGE_SIZE } from '../constants';
 
 export async function BlogPagination({ page, pageSize = PAGE_SIZE }) {
     const postCount = await getPostCount();
@@ -19,7 +19,7 @@ export async function BlogPagination({ page, pageSize = PAGE_SIZE }) {
                 <PaginationItem>
                     <PaginationPrevious
                         isActive={isFirstPage}
-                        variant={'secondary'}
+                        variant="secondary"
                         href={`/blog?page=${isFirstPage ? 1 : page - 1}`}
                     />
                 </PaginationItem>
@@ -31,7 +31,7 @@ export async function BlogPagination({ page, pageSize = PAGE_SIZE }) {
                 <PaginationItem>
                     <PaginationNext
                         isActive={isLastPage}
-                        variant={'secondary'}
+                        variant="secondary"
                         href={`/blog?page=${isLastPage ? pageCount : page + 1}`}
                     />
                 </PaginationItem>

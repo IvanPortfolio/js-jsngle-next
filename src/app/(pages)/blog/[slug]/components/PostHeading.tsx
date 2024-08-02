@@ -1,6 +1,6 @@
-import { PostMeta } from '@/app/(pages)/blog/[slug]/components/PostMeta';
-import { SectionHeading } from '@/app/components/ui/SectionHeading';
+import { SectionHeading } from '@/components/ui';
 import React from 'react';
+import { PostMeta } from './PostMeta';
 
 export function PostHeading({ post }: { post: any }) {
     return (

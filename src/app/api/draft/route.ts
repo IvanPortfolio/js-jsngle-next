@@ -1,6 +1,6 @@
 import { draftMode } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { getPreviewPostBySlug } from '@/app/common/api';
+import { getPreviewPostBySlug } from '@/common/api';
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);

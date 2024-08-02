@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 
 export const SidebarContext = React.createContext({
@@ -6,6 +7,7 @@ export const SidebarContext = React.createContext({
     open: () => {},
     close: () => {},
     toggle: () => {},
+    // eslint-disable-next-line no-unused-vars
     setIsOpen: (value: boolean) => {},
 });
 

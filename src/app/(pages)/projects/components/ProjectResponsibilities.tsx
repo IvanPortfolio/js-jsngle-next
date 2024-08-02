@@ -1,5 +1,5 @@
 import DoubleRightIcon from '@/assets/icons/20/doubleRight.svg';
-import { IProject } from '@/app/(pages)/projects/types';
+import { IProject } from '../types';
 
 export function ProjectResponsibilities({ project }: { project: IProject }) {
     return (

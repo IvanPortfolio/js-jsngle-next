@@ -1,9 +1,9 @@
-import { ProjectTitle } from '@/app/(pages)/projects/components/ProjectTitle';
-import { ProjectSubheading } from '@/app/(pages)/projects/components/ProjectSubheading';
-import { ProjectResponsibilities } from '@/app/(pages)/projects/components/ProjectResponsibilities';
-import { ProjectSkills } from '@/app/(pages)/projects/components/ProjectSkills';
-import { IProject } from '@/app/(pages)/projects/types';
-import { ProjectDescription } from '@/app/(pages)/projects/components/ProjectDescription';
+import { ProjectTitle } from './ProjectTitle';
+import { ProjectSubheading } from './ProjectSubheading';
+import { ProjectResponsibilities } from './ProjectResponsibilities';
+import { ProjectSkills } from './ProjectSkills';
+import { IProject } from '../types';
+import { ProjectDescription } from './ProjectDescription';
 
 export function ProjectContent({ project }: { project: IProject }) {
     return (
