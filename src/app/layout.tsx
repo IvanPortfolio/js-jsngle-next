@@ -6,6 +6,7 @@ import { SidebarProvider } from '@/context';
 import { Background, Header, Sidebar } from '@/components/layout';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { spaceGrotesk } from '../font';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({ children }) {
     return (
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
                             <Header />
                             <div className="pt-6 flex-grow">{children}</div>
                             <SpeedInsights />
+                            <Analytics />
                             <Sidebar />
                         </div>
                     </SidebarProvider>

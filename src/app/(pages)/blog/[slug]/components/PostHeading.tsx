@@ -6,7 +6,9 @@ export function PostHeading({ post }: { post: any }) {
     return (
         <div className="flex flex-col gap-4">
             <PostMeta post={post} />
-            <SectionHeading>{post.title}</SectionHeading>
+            <SectionHeading asChild>
+                <h1>{post.title}</h1>
+            </SectionHeading>
         </div>
     );
 }

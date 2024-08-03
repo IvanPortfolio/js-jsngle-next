@@ -6,14 +6,6 @@ import { Metadata } from 'next';
 import { Post } from './components/Post';
 import { RelatedPosts } from './components/RelatedPosts';
 
-export async function generateStaticParams() {
-    const allPosts = await getAllPosts(false, { skip: 0, limit: 1000 });
-
-    return allPosts.map((post) => ({
-        slug: post.slug,
-    }));
-}
-
 function generateExcerptFromMarkdown(markdown: string): string {
     return `${markdown.replace(/[#`*]/g, '').replace(/\n/g, ' ').slice(0, 90)}...`;
 }

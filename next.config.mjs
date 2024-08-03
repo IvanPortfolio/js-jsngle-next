@@ -9,6 +9,9 @@ const nextConfig = {
             fullUrl: true,
         },
     },
+    experimental: {
+        reactCompiler: true,
+    },
     webpack(config) {
         config.module.rules.push(
             {
