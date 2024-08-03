@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { getAllPosts, getPostAndMorePosts } from '@/common/api';
+import { getPostAndMorePosts } from '@/common/api';
 import { PageLayout, SubscribeSection } from '@/components/layout';
 import { Section } from '@/components/ui';
 import { Metadata } from 'next';
