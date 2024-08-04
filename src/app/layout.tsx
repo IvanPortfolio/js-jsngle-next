@@ -39,6 +39,7 @@ export const metadata: Metadata = {
         default: 'Home',
     },
     description: 'Get all you need to know about JavaScript',
+    metadataBase: new URL('https://jsjungle.dev'),
     openGraph: {
         title: {
             template: '%s | JsJungle',

@@ -1,4 +1,3 @@
-import { draftMode } from 'next/headers';
 import { getPostAndMorePosts } from '@/common/api';
 import React from 'react';
 import { PostThumbnail } from './PostThumbnail';
@@ -6,10 +5,14 @@ import { PostHeading } from './PostHeading';
 import { PostBody } from './PostBody';
 import { PostTags } from './PostTags';
 import { PostShare } from './PostShare';
+import { notFound } from 'next/navigation';
 
-export async function Post({ slug }) {
-    const { isEnabled } = draftMode();
-    const { post } = await getPostAndMorePosts(slug, isEnabled);
+export async function Post({ slug, preview = false }) {
+    const { post } = await getPostAndMorePosts(slug, preview);
+
+    if (!post) {
+        notFound();
+    }
     return (
         <div className="flex flex-col gap-6">
             <PostThumbnail post={post} />

@@ -18,5 +18,5 @@ export async function GET(request: Request) {
     }
 
     draftMode().enable();
-    redirect(`/blog/${post.slug}`);
+    redirect(`/blog/preview/${post.slug}`);
 }

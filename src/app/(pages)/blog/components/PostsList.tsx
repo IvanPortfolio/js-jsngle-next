@@ -1,7 +1,6 @@
 import React from 'react';
 import { BlogPost, PostsGrid } from '@/components/blog';
 import { JavaScriptThumbnail, ReactThumbnail } from '@/components/thumbnail';
-import { draftMode } from 'next/headers';
 import { getAllPosts } from '@/common/api';
 import { PAGE_SIZE } from '../constants';
 
@@ -11,8 +10,7 @@ const CATEGORY_TO_THUMBNAIL = {
 };
 
 export async function PostsList({ page }) {
-    const { isEnabled } = draftMode();
-    const posts = await getAllPosts(isEnabled, {
+    const posts = await getAllPosts(false, {
         limit: PAGE_SIZE,
         skip: (page - 1) * PAGE_SIZE,
     });

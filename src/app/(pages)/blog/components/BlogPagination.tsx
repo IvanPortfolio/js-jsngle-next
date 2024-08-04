@@ -20,7 +20,7 @@ export async function BlogPagination({ page, pageSize = PAGE_SIZE }) {
                     <PaginationPrevious
                         isActive={isFirstPage}
                         variant="secondary"
-                        href={`/blog?page=${isFirstPage ? 1 : page - 1}`}
+                        href={`/blog/page/${isFirstPage ? 1 : page - 1}`}
                     />
                 </PaginationItem>
                 <PaginationItem>
@@ -32,7 +32,7 @@ export async function BlogPagination({ page, pageSize = PAGE_SIZE }) {
                     <PaginationNext
                         isActive={isLastPage}
                         variant="secondary"
-                        href={`/blog?page=${isLastPage ? pageCount : page + 1}`}
+                        href={`/blog/page/${isLastPage ? pageCount : page + 1}`}
                     />
                 </PaginationItem>
             </PaginationContent>

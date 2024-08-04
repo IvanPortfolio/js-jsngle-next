@@ -1,7 +1,6 @@
 import { JavaScriptThumbnail, ReactThumbnail } from '@/components/thumbnail';
 import React from 'react';
 import { getFeaturedPosts } from '@/common/api';
-import { draftMode } from 'next/headers';
 import { BlogPost } from './BlogPost';
 
 const CATEGORY_TO_THUMBNAIL = {
@@ -10,9 +9,7 @@ const CATEGORY_TO_THUMBNAIL = {
 };
 
 export async function BlogList() {
-    const { isEnabled } = draftMode();
-
-    const posts = await getFeaturedPosts(isEnabled);
+    const posts = await getFeaturedPosts(false);
 
     return posts.map((post) => (
         <BlogPost

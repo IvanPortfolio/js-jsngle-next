@@ -1,6 +1,5 @@
 import { JavaScriptThumbnail, ReactThumbnail } from '@/components/thumbnail';
 import React from 'react';
-import { draftMode } from 'next/headers';
 import { getPostAndMorePosts } from '@/common/api';
 import { Section } from '@/components/ui';
 import { BlogPost, PostsGrid } from '@/components/blog';
@@ -11,8 +10,7 @@ const CATEGORY_TO_THUMBNAIL = {
 };
 
 export async function RelatedPosts({ slug }) {
-    const { isEnabled } = draftMode();
-    const { morePosts } = await getPostAndMorePosts(slug, isEnabled);
+    const { morePosts } = await getPostAndMorePosts(slug, false);
 
     return (
         <Section title="Related Posts">
