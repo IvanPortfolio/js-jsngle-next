@@ -13,6 +13,8 @@ function generateExcerptFromMarkdown(markdown: string): string {
 
 export const dynamicParams = false;
 
+export const runtime = 'nodejs';
+
 export async function generateMetadata({
     params: { slug },
 }): Promise<Metadata> {
@@ -33,7 +35,7 @@ export async function generateMetadata({
 export async function generateStaticParams() {
     const posts = await getAllPosts(false, { skip: 0, limit: 100 });
     return posts.map((post) => ({
-        params: { slug: post.slug },
+        slug: post.slug,
     }));
 }
 

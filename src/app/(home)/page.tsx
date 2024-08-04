@@ -7,6 +7,8 @@ import { AboutMeSection } from './components/aboutMe/AboutMeSection';
 import { ProjectsSection } from './components/projects/ProjectsSection';
 import { ToolsSection } from './components/tools/ToolsSection';
 
+export const runtime = 'nodejs';
+
 export default function HomePage() {
     return (
         <div className="flex flex-col 2xl:flex-row gap-6">

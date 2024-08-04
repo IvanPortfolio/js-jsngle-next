@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { BlogPageContent } from './components/BlogPageContent';
 import { BlogPageLayout } from './components/BlogPageLayout';
 
+export const runtime = 'nodejs';
+
 export async function generateMetadata(): Promise<Metadata> {
     return {
         title: 'Blog',

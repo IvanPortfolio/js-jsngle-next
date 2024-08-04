@@ -4,6 +4,8 @@ import { Section } from '@/components/ui';
 import { ProjectItem } from './components/ProjectItem';
 import { PROJECTS } from './data';
 
+export const runtime = 'nodejs';
+
 export default function Projects() {
     return (
         <PageLayout>

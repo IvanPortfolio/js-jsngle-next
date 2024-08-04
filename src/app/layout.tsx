@@ -8,6 +8,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { spaceGrotesk } from '../font';
 import { Analytics } from '@vercel/analytics/react';
 
+export const runtime = 'nodejs';
+
 export default function RootLayout({ children }) {
     return (
         <html

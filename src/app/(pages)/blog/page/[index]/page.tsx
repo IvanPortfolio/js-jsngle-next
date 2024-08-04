@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import { getPostCount } from '@/common/api';
 import { PAGE_SIZE } from '../../constants';
 
+export const runtime = 'nodejs';
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
@@ -11,7 +12,7 @@ export async function generateStaticParams() {
     const pageCount = Math.ceil(postCount / PAGE_SIZE);
 
     return Array.from({ length: pageCount }, (_, index) => ({
-        params: { index: `${index + 1}` },
+        index: `${index + 1}`,
     }));
 }
 
